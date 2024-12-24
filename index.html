@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas Kisha! 🎄</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Screen 1 -->
+        <div class="screen active" id="screen1">
+            <div class="snowfall"></div>
+            <div class="content animate__animated animate__fadeIn">
+                <h1>Hey Kisha! 💖</h1>
+                <p>Ketuk balon-balon pink ini yuk!</p>
+                <div class="balloons-container"></div>
+                <button class="next-btn hidden" onclick="showNextScreen()">
+                    Lanjut ke surprise! ✨
+                </button>
+            </div>
+        </div>
+
+        <!-- Screen 2 -->
+        <div class="screen" id="screen2">
+            <div class="tree-container">
+                <div class="christmas-tree">🎄</div>
+                <div class="ornaments-tray">
+                    <div class="ornament" draggable="true">🎀</div>
+                    <div class="ornament" draggable="true">💝</div>
+                    <div class="ornament" draggable="true">🎁</div>
+                    <div class="ornament" draggable="true">⭐</div>
+                </div>
+                <p>Hias pohon Natalnya yuk! Drag ornamen ke pohon 🎄</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <button id="decorationComplete" class="hidden" onclick="showNextScreen()">
+                    Lihat hadiah spesialmu! 🎁
+                </button>
+            </div>
+        </div>
+
+        <!-- Screen 3 -->
+        <div class="screen" id="screen3">
+            <div class="gift-container animate__animated">
+                <div class="gift-wrapper">
+                    <div class="gift-lid"></div>
+                    <div class="gift-box">
+                        <div class="gift-image">
+                            <img src="assets/images/camera-digital.png" alt="Digital Camera" class="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="message hidden">
+                    <h2>🌟 Merry Christmas, Kisha! 🌟</h2>
+                    <div class="typing-text"></div>
+                    <div class="final-buttons">
+                        <button onclick="playChristmasMusic()">🎵 Play Music</button>
+                        <button onclick="showSnowEffect()">❄️ Make it Snow</button>
+                        <button onclick="createHearts()">💖 Spread Love</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+    <!-- Audio Elements -->
+    <audio id="popSound" src="assets/sounds/pop.mp3"></audio>
+    <audio id="christmasMusic" src="assets/sounds/jingle-bells.mp3" loop></audio>
+    <audio id="successSound" src="assets/sounds/success.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
